@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <title>电子漂流本 💬</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/waline@2/dist/waline.min.css" />
-  <style>
-    body { max-width: 600px; margin: 40px auto; font-family: "微软雅黑", Arial, sans-serif; }
-    h1 { text-align: center; margin-bottom: 20px; }
-  </style>
+<meta charset="UTF-8" />
+<title>电子漂流本 💬 (Cusdis)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+  body {
+    max-width: 600px;
+    margin: 40px auto;
+    font-family: "微软雅黑", Arial, sans-serif;
+    padding: 0 10px;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+</style>
 </head>
 <body>
-  <h1>电子漂流本 💬</h1>  
-  <h2>💬 在这里你可以分享你与主 / 你与团契 / 读经祷告的的日常</h2>
-  <h3>💬 也可以是见证 / 感动和感恩的点</h3>
+  <h1>电子漂流本 💬</h1>
 
-  <div id="waline"></div>
+  <div id="cusdis_thread"></div>
 
-  <script src="https://cdn.jsdelivr.net/npm/waline@2/dist/waline.min.js"></script>
+  <script src="https://cusdis.com/js/widget/lang/zh-cn.js"></script>
+  <script async defer src="https://cusdis.com/js/widget.js"></script>
   <script>
-    Waline.init({
-      el: '#waline',
-      serverURL: 'https://waline.netlify.app/api/',
-      lang: 'zh-CN',
-      requiredFields: [],
-      placeholder: '写下你的留言，匿名即可发表',
-      pageSize: 10,
-      visitor: true,
-      reaction: false
+    window.CusdisWidget.init({
+      host: "https://cusdis.com",
+      appId: "d9195341-4478-409f-92e5-8a5f94ede3ed",
+      pageId: "drift-bottle-page",
+      pageTitle: "电子漂流本 漂流瓶",
+      pageUrl: window.location.href,
     });
   </script>
 </body>
