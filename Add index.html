@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>电子漂流本 💬</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/waline@2/dist/waline.min.css" />
+  <style>
+    body { max-width: 600px; margin: 40px auto; font-family: "微软雅黑", Arial, sans-serif; }
+    h1 { text-align: center; margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+  <h1>电子漂流本 💬</h1>  
+  <h2>💬 在这里你可以分享你与主 / 你与团契 / 读经祷告的的日常</h2>
+  <h3>💬 也可以是见证 / 感动和感恩的点</h3>
+
+  <div id="waline"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/waline@2/dist/waline.min.js"></script>
+  <script>
+    Waline.init({
+      el: '#waline',
+      serverURL: 'https://waline.netlify.app/api/',
+      lang: 'zh-CN',
+      requiredFields: [],
+      placeholder: '写下你的留言，匿名即可发表',
+      pageSize: 10,
+      visitor: true,
+      reaction: false
+    });
+  </script>
+</body>
+</html>
